@@ -32,7 +32,7 @@ def daysBetweenYears(start,end):
 #def daysTill(day,mon,year):
 def daysTill(day,mon):
     days_of_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
-    #if isLeap(year):
+#    if isLeap(year):
 #	days_of_month[2]=29
     days = 0
     if mon == 1:
@@ -48,8 +48,10 @@ def daysAfter(day,mon):
     days = 0
     mon1 = mon
     days_of_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+    #print days_of_month
     #if isLeap(year):
 #	days_of_month[2] = 29
+#	print days_of_month
     if mon == 12 :
         return 31 - day + 1
     else:
@@ -74,7 +76,7 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
             tot_days = (months[month1-1] - day1 ) + day2
         else:
             tot_days = (months[month1-1] - day1 + 1) + day2 + sum(months[month1:month2 - 1])
-    print days_of_year,tot_days
+    #print days_of_year,tot_days
     return days_of_year + tot_days
 
 # Test routine
@@ -88,7 +90,7 @@ def test():
     for (args, answer) in test_cases:
         result = daysBetweenDates(*args)
         if result != answer:
-            print "Test with data:", args, "failed" , result, answer
+            print "Test with data:", args, "failed" #, result, answer
         else:
             print "Test case passed!"
 
